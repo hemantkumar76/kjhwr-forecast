@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: auragrid-energy-terminal
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: DB_PATH
+        value: /app/data/elexon_cache.db
